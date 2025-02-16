@@ -23,33 +23,45 @@
             background-color: #fff;
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.2);
         }
+
+        div {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
     </style>
 </head>
 <body>
     <button id="open-modal">Відкрити модалку</button>
-    
-    <div id="modal" class="backdrop">
-        <div class="modal">
-            <h2>Модальне вікно</h2>
-            <p>Простий варіант модального вікна.</p>
-            <button id="close-modal">Закрити</button>
-        </div>
+
+<div id="modal" class="backdrop">
+    <div class="modal">
+        <h2>Модальне вікно</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum modi iste provident similique eligendi architecto, consequatur veniam ratione non odio ab dolorum saepe consectetur accusamus, corrupti delectus voluptas. Sapiente, debitis.</p>
+        <button id="close-modal">Закрити</button>
     </div>
+</div>
+<div>
 
     <h1>Виберіть колір фону:</h1>
-    <form>
-        <label>
-            <input type="radio" name="color" value="red" checked> Червоний
-        </label>
-        <label>
-            <input type="radio" name="color" value="green"> Зелений
-        </label>
-        <label>
-            <input type="radio" name="color" value="blue"> Синій
-        </label>
-    </form>
+    <label>
+        <input type="radio" name="color" value="red"> Red
+    </label>
+    <label>
+        <input type="radio" name="color" value="green"> Green
+    </label>
+    <label>
+        <input type="radio" name="color" value="blue"> Blue
+    </label>
 
-    
+
+    <input type="text" id="name-input" placeholder="Введіть текст" maxlength="6">
+    <span id="name-output">незнайомець</span>
+
+    <input type="range" id="font-size-control" min="10" max="100" value="16">
+    <span id="text">Змінюй мій розмір тексту!</span>
+</div>
     <script src="./script.js"></script>
 </body>
 </html>
